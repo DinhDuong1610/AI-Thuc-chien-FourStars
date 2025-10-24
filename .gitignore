@@ -1,0 +1,27 @@
+# File chứa biến môi trường - TUYỆT ĐỐI KHÔNG ĐƯA LÊN GIT!
+.env
+
+# Thư mục môi trường ảo Python
+venv/
+.venv/
+
+# Các file cache và file biên dịch của Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Thư mục cài đặt riêng của VSCode
+.vscode/
+
+# Checkpoints của Jupyter Notebook
+.ipynb_checkpoints/
+
+# Các file hệ thống của macOS và Windows
+.DS_Store
+Thumbs.db
+
+# Bạn có thể bỏ comment các dòng dưới nếu không muốn đưa các file tài nguyên
+# được tạo ra lên Git (khuyến khích nếu chúng quá nặng)
+# generated_assets/
+# final_product/
