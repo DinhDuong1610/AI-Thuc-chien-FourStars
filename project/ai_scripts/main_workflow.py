@@ -236,23 +236,31 @@ def workflow_de_7_data_report():
 
     # 1. Sinh báo cáo phân tích từ dữ liệu
     prompt_report = f"""
-    Dựa trên các số liệu thống kê sau đây về sự kiện kỷ niệm 80 năm Quốc khánh 2/9:
-    {sample_data}
-    Hãy viết một bản báo cáo tổng kết chuyên nghiệp. Báo cáo cần có các phần:
-    1. Tóm tắt tổng quan: Nêu bật những thành công chính.
-    2. Phân tích chi tiết: Đi sâu vào từng số liệu và nêu ý nghĩa của chúng.
-    3. Đánh giá hiệu quả truyền thông.
-    4. Kết luận và đề xuất cho các sự kiện tương lai.
+    You are a data analysis about technology of "Hiệp hội dữ liệu Việt Nam".
+
+    Input:
+    Collect information from "Hiệp hội dữ liệu Việt Nam" website, no adding outside information
+
+    Task:
+    Create 3 main insight about digital transformation topic in Viet Nam to promotion for young generation
+
+    Rules:
+    - Each section 1-2 sentences.
+    - Vietnamese only.
+    - Output plain text only, no markdown.
+
+    Style:
+    - Positive, creative.
     """
     report_text = generate_text(prompt_report)
     if report_text:
         save_text(report_text, os.path.join(D7_REPORT_DIR, "bao_cao_tong_ket.txt"))
 
     # 2. Sinh biểu đồ minh họa
-    prompt_chart = "Một biểu đồ cột đẹp mắt, chuyên nghiệp để trình bày trong báo cáo. Trục X có các danh mục: 'Người tham gia diễu hành', 'Khách du lịch TP.HCM', 'Tương tác MXH'. Trục Y là số lượng (tính bằng triệu). Phong cách tối giản, màu sắc xanh dương và đỏ."
-    chart_image = generate_image(prompt_chart, size="1792x1024")
-    if chart_image:
-        save_image(chart_image, os.path.join(D7_REPORT_DIR, "bieu_do_minh_hoa.png"))
+    # prompt_chart = "Một biểu đồ cột đẹp mắt, chuyên nghiệp để trình bày trong báo cáo. Trục X có các danh mục: 'Người tham gia diễu hành', 'Khách du lịch TP.HCM', 'Tương tác MXH'. Trục Y là số lượng (tính bằng triệu). Phong cách tối giản, màu sắc xanh dương và đỏ."
+    # chart_image = generate_image(prompt_chart, size="1792x1024")
+    # if chart_image:
+    #     save_image(chart_image, os.path.join(D7_REPORT_DIR, "bieu_do_minh_hoa.png"))
 
     print("--- HOÀN THÀNH WORKFLOW DẠNG ĐỀ 7 ---")
     print(">>> Nhiệm vụ tiếp theo: Sử dụng MS Word/Google Docs để định dạng báo cáo từ file .txt và chèn biểu đồ đã tạo.")
@@ -338,9 +346,9 @@ if __name__ == "__main__":
     # workflow_de_2_truyen_tranh()
     # workflow_de_3_infographic()
     # workflow_de_4_website()
-    workflow_de_5_lyric_song()
+    # workflow_de_5_lyric_song()
     # workflow_de_6_event_plan()
-    # workflow_de_7_data_report()
+    workflow_de_7_data_report()
     # workflow_de_8_mobile_web_game()
     # workflow_de_9_flyer()
 
