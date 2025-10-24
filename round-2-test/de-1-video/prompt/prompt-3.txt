@@ -1,0 +1,3 @@
+Tạo shotlist 6 cảnh cho video 80s: mỗi cảnh gồm duration(giây), visual_cue(ảnh/b-roll gợi ý),
+voiceover(≤25 từ), on_screen_text(≤8 từ). Tổng thời lượng ≤80s.
+Ưu tiên mở-cao trào-kết, tránh rối mắt.
