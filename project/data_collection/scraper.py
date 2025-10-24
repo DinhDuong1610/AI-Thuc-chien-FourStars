@@ -35,15 +35,16 @@ def fetch_article_text(url):
 
 if __name__ == "__main__":
     # Danh sách các URL được phép
-    VTV_URL = "https://vtv.vn/chinh-tri/bai-viet-mau.htm" # Thay bằng URL thật
-    DANGCONGSAN_URL = "https://dangcongsan.vn/bai-viet-mau.htm" # Thay bằng URL thật
+    # VTV_URL = "https://vtv.vn/chinh-tri/bai-viet-mau.htm" # Thay bằng URL thật
+    # DANGCONGSAN_URL = "https://dangcongsan.vn/bai-viet-mau.htm" # Thay bằng URL thật
+    URL = "https://nda.org.vn"
     
-    print(f"Đang crawl dữ liệu từ {VTV_URL}...")
-    article_content = fetch_article_text(VTV_URL)
+    print(f"Đang crawl dữ liệu từ {URL}...")
+    article_content = fetch_article_text(URL)
     
     if article_content:
         # Lưu vào file để sử dụng làm ngữ cảnh cho AI
-        output_path = "collected_data/vtv_article.txt"
+        output_path = "collected_data/article.txt"
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(article_content)
         print(f"Đã lưu nội dung vào {output_path}")

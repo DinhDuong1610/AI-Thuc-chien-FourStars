@@ -338,7 +338,7 @@ if __name__ == "__main__":
     # workflow_de_2_truyen_tranh()
     # workflow_de_3_infographic()
     # workflow_de_4_website()
-    # workflow_de_5_lyric_song()
+    workflow_de_5_lyric_song()
     # workflow_de_6_event_plan()
     # workflow_de_7_data_report()
     # workflow_de_8_mobile_web_game()
